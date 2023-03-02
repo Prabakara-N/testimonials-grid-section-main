@@ -47,7 +47,7 @@ body {
 
 main {
   width: min(95%, 1120px);
-  margin: 3rem auto;
+  margin: 3.5rem auto;
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-areas: "one" "two" "three" "four" "five";
@@ -58,6 +58,8 @@ main {
 .section {
   padding: 1.75rem 2.5rem;
   border-radius: 10px;
+  box-shadow: 1.25px 1.25px 1.25px rgba(0, 0, 0, 0.2),
+    -1.25px -1.25px 1.25px rgba(0, 0, 0, 0.2);
 }
 
 .image {

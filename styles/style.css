@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+  padding: 0;
+  margin-top: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+:root {
+  --clr-Moderate-violet: #7541c8;
+  --clr-Very-dark-grayish-blue: #48556a;
+  --clr-Very-dark-blackish-blue: #19212e;
+  --clr-White: #ffffff;
+  --clr-Light-gray: #cfcfcf;
+  --clr-Light-grayish-blue: #ecf2f8;
+  --box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--clr-Light-grayish-blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  width: min(95%, 1120px);
+  margin: 3rem auto;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "one" "two" "three" "four" "five";
+  gap: 2rem;
+}
+
+/* common css  */
+.section {
+  padding: 1.75rem 2.5rem;
+  border-radius: 10px;
+}
+
+.image {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid var(--clr-Light-gray);
+}
+
+h2 {
+  color: var(--clr-Light-grayish-blue);
+  line-height: 25px;
+  font-size: 1.6rem;
+}
+
+span {
+  color: var(--clr-Light-gray);
+  opacity: 50%;
+  padding-top: 10px;
+}
+
+.author-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.author-name {
+  color: var(--clr-Light-grayish-blue);
+  padding-top: 8px;
+  font-size: 1.15rem;
+}
+
+.description {
+  color: var(--clr-Light-gray);
+  opacity: 70%;
+  line-height: 20px;
+  font-size: 1.15rem;
+}
+
+/* 1st card */
+.one {
+  background-color: var(--clr-Moderate-violet);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 0;
+  background-size: 100px 110px;
+}
+
+/* 2nd card */
+.two {
+  background-color: var(--clr-Very-dark-grayish-blue);
+}
+
+/* 3rd card */
+.three {
+  background-color: var(--clr-White);
+}
+
+.three > h2 {
+  color: var(--clr-Very-dark-grayish-blue);
+}
+
+.three > div > p {
+  color: var(--clr-Very-dark-grayish-blue);
+}
+
+.three > div > p > span {
+  color: var(--clr-Very-dark-grayish-blue);
+}
+
+.three > .description {
+  color: var(--clr-Very-dark-grayish-blue);
+  opacity: 0.7;
+}
+
+/* 4rd card */
+.four {
+  background-color: var(--clr-Very-dark-blackish-blue);
+}
+
+.four > div > div > .image {
+  border: 2px solid var(--clr-Moderate-violet);
+}
+
+/* 5rd card */
+.five {
+  background-color: var(--clr-White);
+}
+
+.five > h2 {
+  color: var(--clr-Very-dark-grayish-blue);
+}
+
+.five > div > p {
+  color: var(--clr-Very-dark-grayish-blue);
+}
+
+.five > div > p > span {
+  color: var(--clr-Very-dark-grayish-blue);
+}
+
+.five > .description {
+  color: var(--clr-Very-dark-grayish-blue);
+  opacity: 0.7;
+}
+
+/* grid codes */
+.section.one {
+  grid-area: one;
+}
+.section.two {
+  grid-area: two;
+}
+.section.three {
+  grid-area: three;
+}
+.section.four {
+  grid-area: four;
+}
+.section.five {
+  grid-area: five;
+}
+
+/* media screen */
+@media screen and (min-width: 530px) {
+  main {
+    grid-template-areas: "one one" "two five" "three  five" "four four";
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  main {
+    grid-template-areas: "one one two five" "three four four five";
+  }
+}
